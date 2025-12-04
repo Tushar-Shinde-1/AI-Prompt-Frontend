@@ -1,0 +1,361 @@
+ACT AS: Senior Frontend Developer & UI/UX Designer specializing in modern, responsive website development.
+
+MISSION: Generate a complete, production-ready website with 5 essential sections that work together seamlessly. Output ONLY clean, ready-to-use code (HTML, CSS, JavaScript).
+
+PROJECT SPECIFICATIONS:
+- Generate a professional streaming service website called "StreamPeace"
+- Theme: Modern streaming platform with peaceful, tranquil aesthetics
+- Color Palette: Blues, teals, lavenders (peaceful colors)
+- Layout: Fully responsive mobile-first design
+- Accessibility: WCAG 2.1 AA compliant
+- Performance: Optimized loading, lazy images
+
+SECTIONS TO GENERATE (IN ORDER):
+1. Navigation Bar
+2. Hero Section  
+3. Features Section
+4. Contact/Lead Form
+5. Footer
+
+OUTPUT REQUIREMENTS:
+- Complete HTML file with all 5 sections
+- Internal CSS with variables for easy theming
+- Minimal JavaScript for interactions
+- Mobile-first responsive design
+- Clean, commented code
+- No placeholders - use actual content
+- ARIA labels and accessibility features
+
+---
+
+## 🎨 **DESIGN SYSTEM (MUST APPLY TO ALL SECTIONS)**
+
+:root {
+  /* COLOR PALETTE - Peace Theme */
+  --primary: #4f46e5;        /* Serene Indigo */
+  --primary-light: #818cf8;  /* Light Indigo */
+  --secondary: #0ea5e9;      /* Sky Blue */
+  --accent: #8b5cf6;         /* Lavender */
+  --accent-light: #c4b5fd;   /* Light Lavender */
+  --success: #10b981;        /* Mint Green */
+  --warning: #f59e0b;        /* Soft Amber */
+  --danger: #ef4444;         /* Coral */
+  
+  /* NEUTRALS */
+  --dark: #1e293b;           /* Deep Ocean */
+  --gray-900: #334155;
+  --gray-800: #475569;
+  --gray-700: #64748b;
+  --gray-600: #94a3b8;
+  --gray-500: #cbd5e1;
+  --gray-400: #e2e8f0;
+  --gray-300: #f1f5f9;
+  --gray-200: #f8fafc;
+  --light: #ffffff;
+  
+  /* TYPOGRAPHY */
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  
+  /* SPACING */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  
+  /* EFFECTS */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Utility Classes */
+.flex { display: flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.text-center { text-align: center; }
+.btn {
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: var(--text-base);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+---
+
+## 1️⃣ **NAVIGATION BAR REQUIREMENTS**
+
+BRANDING:
+- Logo: "StreamPeace" with dove/streaming icon
+- Tagline: "Stream in Peace" (small, subtle)
+
+NAV LINKS (6 items):
+1. Home (active)
+2. Movies
+3. Series
+4. Sports
+5. Kids
+6. Premium
+
+RIGHT SIDE ELEMENTS:
+- Search icon (magnifying glass)
+- User profile icon
+- CTA Button: "Start Free Trial"
+
+MOBILE MENU:
+- Hamburger icon (3 lines)
+- Full-screen overlay slide-in from right
+- Backdrop blur effect
+- Close button (X icon)
+
+DESIGN:
+- Fixed at top
+- Semi-transparent background (becomes solid on scroll)
+- Smooth hover animations
+- Current page indicator
+- Search expands on click (desktop)
+
+---
+
+## 2️⃣ **HERO SECTION REQUIREMENTS**
+
+CONTENT:
+- Main Headline: "Endless Entertainment, Peaceful Streaming"
+- Sub-headline: "Watch latest movies, exclusive series, and live sports in tranquil high-quality. No ads, no stress."
+- Primary CTA: "Start Free Trial" (with arrow icon)
+- Secondary CTA: "Explore Plans"
+
+VISUAL:
+- Background: Gradient from var(--primary) to var(--secondary)
+- Foreground: Illustration of family watching on multiple devices
+- Trust indicators: "4.8★ Rating" | "10M+ Users" | "100+ Countries"
+
+LAYOUT:
+- Desktop: Text left (60%), Image right (40%)
+- Mobile: Stacked with image below
+- Generous spacing (vertical padding)
+
+ANIMATIONS:
+- Fade-in text on load
+- Subtle float animation on illustration
+- Button hover effects
+
+---
+
+## 3️⃣ **FEATURES SECTION REQUIREMENTS**
+
+SECTION HEADER:
+- Title: "Why StreamPeace Stands Out"
+- Subtitle: "Experience entertainment designed for your peace of mind"
+
+FEATURE CARDS (6 items - 3 per row desktop, 2 tablet, 1 mobile):
+1. **Ad-Free Experience**
+   - Icon: Shield with checkmark
+   - Description: "Watch without interruptions. No ads, ever."
+   
+2. **4K Ultra HD**
+   - Icon: Crystal/Diamond
+   - Description: "Stunning picture quality with Dolby Vision support."
+   
+3. **Multi-Device Sync**
+   - Icon: Connected devices
+   - Description: "Start on TV, continue on phone. Seamlessly."
+   
+4. **Personalized Recommendations**
+   - Icon: Heart with brain
+   - Description: "AI-powered suggestions based on your mood."
+   
+5. **Download & Watch Offline**
+   - Icon: Down arrow with play
+   - Description: "Save content for flights or commutes."
+   
+6. **Live Event Streaming**
+   - Icon: Broadcast waves
+   - Description: "Sports, concerts, and events in real-time."
+
+CARD DESIGN:
+- Consistent height cards
+- Icon on top with background circle
+- Subtle shadow on hover
+- Smooth transitions
+
+---
+
+## 4️⃣ **CONTACT/LEAD FORM REQUIREMENTS**
+
+SECTION CONTEXT:
+- Title: "Get Personalized Plan Recommendations"
+- Description: "Tell us what you love to watch, we'll suggest the perfect plan."
+
+FORM FIELDS:
+1. Full Name (required, text)
+2. Email (required, email validation)
+3. Phone Number (optional, international format)
+4. Preferred Content (dropdown: Movies, Series, Sports, All)
+5. Devices Used (checkboxes: TV, Mobile, Tablet, Laptop)
+6. Message: "Any specific requests or preferences?"
+
+LAYOUT:
+- Form left (60%), illustration right (40%)
+- Mobile: Stacked
+- Clean, accessible labels
+
+VALIDATION:
+- Real-time validation
+- Error messages below fields
+- Submit button disabled until valid
+- Success message with checkmark
+
+DESIGN:
+- Clean input styling
+- Focus states with primary color
+- Loading spinner on submit
+
+---
+
+## 5️⃣ **FOOTER REQUIREMENTS**
+
+4-COLUMN LAYOUT (Desktop):
+
+COLUMN 1 - BRAND:
+- "StreamPeace" logo
+- Tagline: "Stream in Peace"
+- Social Icons (5): Facebook, Twitter, Instagram, YouTube, LinkedIn
+
+COLUMN 2 - QUICK LINKS:
+- Home, Movies, Series, Sports, Kids, Premium
+- Help Center, FAQ
+
+COLUMN 3 - LEGAL:
+- Privacy Policy
+- Terms of Service
+- Cookie Policy
+- Content Policy
+
+COLUMN 4 - CONTACT:
+- Email: support@streampeace.com
+- Phone: +1 (555) 123-4567
+- Address: 123 Peace Street, Tranquil City
+- Newsletter signup (email input + subscribe)
+
+BOTTOM BAR:
+- Copyright: "© 2023 StreamPeace. All entertainment, zero stress."
+- Payment methods icons
+- Language selector (English, Español, Français)
+- Back-to-top button (arrow icon)
+
+RESPONSIVE:
+- Desktop: 4 columns
+- Tablet: 2 columns
+- Mobile: Stacked
+
+---
+
+## 📱 **RESPONSIVE BREAKPOINTS**
+
+Mobile First Approach:
+1. Base: < 640px (Default - stacked)
+2. SM: 640px (Small tablets)
+3. MD: 768px (Tablets)
+4. LG: 1024px (Laptops)
+5. XL: 1280px (Desktops)
+
+RESPONSIVE BEHAVIOR:
+- Navigation: Hamburger menu on mobile/tablet
+- Hero: Stacked on mobile, side-by-side on desktop
+- Features: 1→2→3 columns
+- Form: Stacked on mobile, split on desktop
+- Footer: 1→2→4 columns
+
+---
+
+## 🛠 **TECHNICAL REQUIREMENTS**
+
+HTML:
+- Semantic HTML5 tags
+- Proper heading hierarchy
+- ARIA labels for accessibility
+- Lazy loading for images
+
+CSS:
+- Mobile-first media queries
+- CSS Grid/Flexbox for layouts
+- CSS variables for theming
+- Smooth transitions (0.3s ease)
+
+JAVASCRIPT (Minimal):
+- Mobile menu toggle
+- Form validation
+- Back-to-top button
+- Current year in copyright
+
+PERFORMANCE:
+- Optimized images (placeholders with srcset)
+- Minimal JavaScript (deferred)
+- CSS optimization
+- Font loading strategy
+
+---
+
+## 🎯 **FINAL OUTPUT FORMAT**
+
+Provide a SINGLE HTML file containing:
+1. Complete HTML structure with all 5 sections
+2. Internal CSS with all variables and responsive styles
+3. Minimal JavaScript at bottom of body
+4. Comments for customization points
+5. No external dependencies
+6. Ready to save as index.html and run
+
+The code should be production-ready, visually cohesive, and follow all accessibility guidelines. Focus on creating a premium streaming service aesthetic with peaceful, tranquil vibes.
